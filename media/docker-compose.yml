@@ -3,7 +3,8 @@ services:
   vpn:
     container_name: nordvpn
     image: tmknight88/nordvpn:latest
-    restart: always    cap_add:
+    restart: always
+    cap_add:
       - NET_ADMIN
     environment: # Review https://github.com/tmknight/docker-nordvpn/#environment-variables
       Technology: NordLynx
