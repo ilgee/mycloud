@@ -1,0 +1,68 @@
+title: <insert title>
+favicon: <insert url>
+startUrl: <insert url>
+instanceName: <insert name>
+theme: dark # or light
+color: slate # or gray, zinc, neutral, stone, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, >
+disableCollapse: true # false by default
+groupsInitiallyCollapsed: false # false by default
+useEqualHeights: true # false by default
+headerStyle: underlined # options: unterlined, boxed, clean, boxedWidgets
+language: de # supported: ca, de, en, es, fr, he, hr, hu, it, nb-NO, nl, pt, ru, sv, vi, zh-CN, zh-Hant
+target: _blank # options: _blank, _self, _top
+hideVersion: true # false by default
+showStats: false # show Docker stats by default
+#statusStyle: 'dot' # 'dot' or 'basic'. No value by default
+
+hideErrors: true # false by default
+providers:
+  openweathermap: <insert api>
+
+quicklaunch:
+  searchDescriptions: true # false by default
+  hideInternetSearch: false # false by default
+  showSearchSuggestions: false # inaherited from search widget. if not specified defaults to false.
+  hideVisitURL: false # false by default
+
+layout:
+  Media:
+    style: row
+    columns: 2
+    header: true
+    tab: Home
+
+  Adblock:
+    style: row
+    columns: 1
+    header: true
+    tab: Home
+
+  Suite:
+    style: row
+    columns: 3
+    header: false
+    tab: Automation
+
+  Downloader:
+    style: row
+    columns: 1
+    header: true
+    tab: Automation
+
+  Server:
+    style: row
+    columns: 3
+    header: true
+    tab: Administration
+
+  Network:
+    style: row
+    columns: 1
+    header: true
+    tab: Administration
+  
+  FRITZ!Box:
+    style: row
+    columns: 3
+    header: false
+    tab: Administration
