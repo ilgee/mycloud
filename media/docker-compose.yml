@@ -23,13 +23,13 @@ services:
       - 8989:8989  # sonarr
       - 9696:9696  # prowlarr
     networks:
-     proxy:
+      proxy:
         ipv4_address: 172.21.0.7
 
   qbittorrent:
-   container_name: qbittorrent
-   image: lscr.io/linuxserver/qbittorrent:latest
-      restart: always
+    container_name: qbittorrent
+    image: lscr.io/linuxserver/qbittorrent:latest
+    restart: always
     environment:
       - PUID=1000
       - PGID=1000
@@ -121,15 +121,15 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Berlin
-# For Hardware acceleration read https://docs.linuxserver.io/images/docker-jellyfin/
-#      - DOCKER_MODS=linuxserver/mods:jellyfin-opencl-intel   # example for Intel OpenCL
+      # For Hardware acceleration read https://docs.linuxserver.io/images/docker-jellyfin/
+      #- DOCKER_MODS=linuxserver/mods:jellyfin-opencl-intel   # example for Intel OpenCL
     volumes:
       - ./jellyfin/config:/config:rw
       - ./data/movies:/data/movies:rw
       - ./data/shows:/data/shows:rw
-#      - /dev/shm:/transcode    # For transcoding to RAM if enabled and configured
-#    devices:
-#       - /dev/dri/:/dev/dri/   # For hardware acceleration. Read https://docs.linuxserver.io/images/docker-jellyfin/ for arch specific implementation. 
+      #- /dev/shm:/transcode    # For transcoding to RAM if enabled and configured
+    #devices:
+       #- /dev/dri/:/dev/dri/   # For hardware acceleration. Read https://docs.linuxserver.io/images/docker-jellyfin/ for arch specific implementation. 
     ports:
       - 8096:8096
       - 7359:7359/udp   # Client Discovery. Allows clients to discover Jellyfin on the local network.
